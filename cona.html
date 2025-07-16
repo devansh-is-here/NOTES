@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devansh's OS Notes</title>
+  <style>
+body.dark {
+  background: linear-gradient(to bottom right, #121212, #1e1e1e);
+  color: #e0e0e0;
+}
+
+body.dark header {
+  background: linear-gradient(to right, #4a148c, #311b92);
+}
+
+body.dark nav {
+  background: #2a2a2a;
+}
+
+body.dark nav button {
+  background: #673ab7;
+}
+
+body.dark nav button:hover {
+  background: #512da8;
+}
+
+body.dark .content {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+body.dark .unit pre {
+  background: #2c2c2c;
+  color: #fff;
+}
+
+body.dark .unit h2 {
+  color: #f48fb1;
+  border-bottom: 2px solid #ba68c8;
+}
+
+body.dark .insta-link {
+  background-color: #4a148c;
+  color: #fff;
+}
+
+body.dark .insta-link:hover {
+  background-color: #6a1b9a;
+}
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e3f2fd, #fce4ec);
+      color: #212121;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #8e24aa, #6a1b9a);
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #ede7f6;
+      padding: 1rem;
+      gap: 12px;
+    }
+    nav button {
+      background: #7e57c2;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #5e35b1;
+    }
+    .content {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    .unit {
+      display: none;
+    }
+    .unit.active {
+      display: block;
+    }
+    .unit pre {
+      white-space: pre-wrap;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3e5f5;
+      padding: 1rem;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+    .unit h2 {
+      color: #4a148c;
+      font-size: 2rem;
+      border-bottom: 2px solid #ce93d8;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+.insta-link {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #f8bbd0;
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+.insta-link a {
+  text-decoration: none;
+  color: #4a148c;
+}
+.insta-link:hover {
+  background-color: #f48fb1;
+}
+  </style>
+  <script>
+    function showUnit(unitId) {
+      document.querySelectorAll('.unit').forEach(el => el.classList.remove('active'));
+      document.getElementById(unitId).classList.add('active');
+    }
+  </script>
+<!-- AOS Library CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<!-- AOS Library JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+<body>
+<script>
+  AOS.init({
+    duration: 1000, // animation speed in ms
+    once: true      // only animate once when scrolling down
+  });
+</script>
+
+<div class="insta-link">
+  <a href="https://www.instagram.com/_devansh_088" target="_blank">📸 @_devansh_088</a>
+</div>
+
+
+  <header>
+    <h1>Devansh's Operating System Notes</h1>
+<button id="toggle-dark" style="
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 8px 14px;
+  background: #fff;
+  color: #4a148c;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+">🌙 Dark Mode</button>
+
+    <p>Select a unit to view detailed notes 📚</p>
+  </header>
+  <nav>
+    <button onclick="showUnit('unit1')">Unit 1</button>
+    <button onclick="showUnit('unit2')">Unit 2</button>
+    <button onclick="showUnit('unit3')">Unit 3</button>
+    <button onclick="showUnit('unit4')">Unit 4</button>
+    <button onclick="showUnit('unit5')">Unit 5</button>
+  </nav>
+  <div class="content">
+    <div class="unit active" id="unit1"data-aos="fade-up">
+      <h2>Unit 1 – 🚀 CPU & System Soul
+</h2>
+      <pre>🖥️    ARCHITECTURE
+
+
+🧠 Super-Concept Notes
+📍1. Stored Program Concept
+🔹 Concept:
+Proposed by John von Neumann.
+
+Idea: Instructions and data are both stored in the same memory.
+
+CPU fetches instructions one-by-one and executes them.
+
+🧠 Master Points:
+Basis of modern computers (von Neumann architecture).
+
+Makes it possible to reprogram the system without hardware change.
+
+Instructions are stored as binary values (machine code).
+
+📍2. Components of a Computer System
+🔹 Main Components:
+Input Unit – Accepts data (e.g., keyboard, mouse).
+
+Output Unit – Displays result (e.g., monitor, printer).
+
+Memory Unit – Stores data & instructions.
+
+Central Processing Unit (CPU) – Brain of computer.
+
+ALU
+
+Control Unit
+
+Storage Devices – HDD, SSD for long-term data.
+
+🧠 Master Points:
+All components communicate via system bus (data, address, control).
+
+Memory: RAM (volatile), ROM (non-volatile).
+
+CPU performs all processing tasks.
+
+📍3. Machine Instruction
+🔹 Definition:
+A binary-coded operation that the processor can perform.
+
+Stored in memory and executed by CPU.
+
+🧠 Master Points:
+Each instruction has a specific opcode and operand.
+
+Written in machine language (binary/hex).
+
+Example: 1001 0001 — could mean "Load register with data".
+
+📍4. Opcodes and Operands
+🔹 Opcode (Operation Code):
+Specifies the operation to be performed (e.g., add, move, load).
+
+🔹 Operand:
+The data (or memory address) on which operation is performed.
+
+🧠 Master Points:
+Instruction format:
+Opcode + Operand(s)
+
+Example: MOV A, 05H — here MOV is opcode, A and 05H are operands.
+
+Opcodes are architecture dependent (Intel, ARM, etc.).
+
+📍5. Instruction Cycle
+🔹 Steps:
+Fetch – Get instruction from memory.
+
+Decode – Understand the instruction.
+
+Execute – Perform the task.
+
+Store (optional) – Save result back to memory or register.
+
+🧠 Master Points:
+Controlled by Control Unit.
+
+Happens billions of times per second (GHz CPUs).
+
+Cycle repeats continuously until halt.
+
+📍6. Organization of CPU (Central Processing Unit)
+🔹 Main parts:
+Arithmetic Logic Unit (ALU)
+
+Performs arithmetic (add, sub) and logic (AND, OR) operations.
+
+Control Unit (CU)
+
+Directs operation of processor.
+
+Controls fetch-decode-execute cycle.
+
+Registers
+
+Small memory units inside CPU for fast access.
+
+📍7. ALU (Arithmetic Logic Unit)
+🔹 Function:
+Performs all arithmetic and logical operations.
+
+🧠 Master Points:
+Receives input from registers.
+
+Produces output stored in accumulator or another register.
+
+Works closely with control unit and system bus.
+
+📍8. Hardwired Control Unit
+🔹 Concept:
+Control signals are generated using combinational logic circuits (gates, flip-flops).
+
+🧠 Master Points:
+Fast performance.
+
+Difficult to modify (hardware-dependent).
+
+Best for RISC architectures (fewer instructions).
+
+📍9. Microprogrammed Control Unit
+🔹 Concept:
+Control signals generated by executing microinstructions stored in control memory.
+
+🧠 Master Points:
+Flexible and easier to modify.
+
+Slower than hardwired.
+
+Best for CISC architectures (complex instructions).
+
+📍10. General Purpose and Special Purpose Registers
+🔹 General Purpose Registers:
+Used for general computation (temporary storage).
+
+Example: AX, BX, CX, DX (in Intel 8086).
+
+🔹 Special Purpose Registers:
+Have dedicated roles:
+
+Program Counter (PC) – holds address of next instruction.
+
+Instruction Register (IR) – holds current instruction.
+
+Accumulator – stores intermediate results.
+
+Stack Pointer (SP) – points to top of stack.
+
+Status Register – stores flags (carry, zero, overflow, etc.).
+
+🧠 Master Points:
+Registers are fastest storage in the system.
+
+Play vital role in instruction execution.
+
+Limited in number (within CPU).
+
+🔚 Summary Table
+Concept	Highlights
+Stored Program Concept          	Program + Data in same memory
+Components of Computer System	        Input, Output, Memory, CPU
+Machine Instruction	                Binary operation for CPU
+Opcode	                                Operation code (e.g. ADD)
+Operand	                                Data/Address for operation
+Instruction Cycle	                Fetch → Decode → Execute
+ALU	                                Performs calculations
+Control Unit	                        Directs operation flow
+Hardwired CU	                        Fast but fixed
+Microprogrammed CU	                Flexible but slow
+Registers	                        Fast CPU storage
+
+
+
+
+
+
+
+____________________________________________________________________________________
+
+🤓
+
+    </div>
+
+    <div class="unit" id="unit2"data-aos="zoom-in">
+      <h2>Unit 2 – CPU in action</h2>
+      <pre>🔁 Instructions Format-
+
+
+
+📘 Super Detailed Notes: Functioning of CPU
+📍 1. Instruction Formats
+🔹 Concept:
+Structure or layout of bits in an instruction.
+
+🧱 Components:
+Opcode – Operation to perform.
+
+Operand(s) – Data or memory location.
+
+Mode field – (if present) indicates addressing mode.
+
+🧠 Master Points:
+Instruction format affects instruction size (16-bit, 32-bit, etc.).
+
+More operands = larger format.
+
+Example formats:
+
+Zero-address (Stack-based)
+
+One-address (Accumulator)
+
+Two-address
+
+Three-address
+
+📍 2. Op Codes (Operation Codes)
+🔹 Concept:
+A binary value that specifies the operation to be performed.
+
+🧠 Master Points:
+Tells the CPU what to do (e.g., ADD, SUB, MOV).
+
+Defined in Instruction Set Architecture (ISA).
+
+Example:
+
+0001 → ADD
+
+0010 → SUB
+
+0011 → MUL
+
+📍 3. Instruction Types
+🔹 Categories:
+Data Transfer – MOV, LOAD, STORE
+
+Arithmetic – ADD, SUB, MUL, DIV
+
+Logical – AND, OR, NOT, XOR
+
+Control Transfer – JMP, CALL, RET
+
+I/O Instructions – IN, OUT
+
+Machine Control – HLT, NOP
+
+🧠 Master Points:
+These types help organize ISA.
+
+Modern CPUs support hundreds of such instructions.
+
+📍 4. Addressing Modes
+🔹 Concept:
+Defines how to access operand/data for an instruction.
+
+🔢 Types of Addressing Modes:
+Mode	Description
+Immediate	Operand is in the instruction itself.
+Register	Operand is in a register.
+Direct	Address of operand is given.
+Indirect	Address field points to memory which holds address of operand.
+Indexed	Base address + index.
+Relative	PC + offset (for jumps/branches).
+
+🧠 Master Points:
+Efficiency booster for CPU.
+
+Different modes used for speed, flexibility, and memory saving.
+
+📍 5. Common Microprocessor Instructions
+🔹 Examples (Intel-like):
+MOV A, B → Copy content of B to A.
+
+ADD A, #05H → Add 5 to A.
+
+JMP 2000H → Jump to address 2000.
+
+IN 01H → Input from port 01H.
+
+OUT 02H → Output to port 02H.
+
+🧠 Master Points:
+Used in low-level programming.
+
+Vary by processor type (Intel 8085, ARM, etc.).
+
+Divided into: Data Transfer, Arithmetic, Logical, Branching, I/O, Control.
+
+📍 6. Multi-Core Architecture
+🔹 Concept:
+Multiple cores (CPUs) on a single chip.
+
+Each core can execute tasks independently.
+
+🧠 Master Points:
+Boosts parallel processing.
+
+Enables multi-threading.
+
+Common in modern CPUs (dual-core, quad-core, octa-core).
+
+Shared Cache, Shared Memory possible.
+
+🔧 Example:
+Quad-core processor can run 4 threads/programs simultaneously.
+
+📍 7. Multiprocessor Systems
+🔹 Concept:
+System with multiple CPUs working together.
+
+🧠 Master Points:
+Shared Memory architecture.
+
+Better throughput, reliability, and fault tolerance.
+
+Types:
+
+Symmetric Multiprocessing (SMP) – Equal CPUs.
+
+Asymmetric Multiprocessing (AMP) – One master CPU controls others.
+
+📍 8. Multicomputer Systems
+🔹 Concept:
+Collection of independent computers working as a system.
+
+🧠 Master Points:
+Connected via network (clustered systems).
+
+No shared memory.
+
+Used in distributed computing, cloud, supercomputers.
+
+🔧 Example:
+Google’s data centers = massive multicomputer systems.
+
+🧾 Summary Table
+🔑 Topic	🔍 Key Points
+Instruction Format	              Layout: Opcode + Operand(s)
+Op Codes	                      Binary codes for operations
+Instruction Types	              Arithmetic, Logic, Control, etc.
+Addressing Modes	              Immediate, Register, Direct, etc.
+Microprocessor Instructions	      Real examples: MOV, ADD, JMP
+Multi-cor Architecture         	      Multiple cores on one chip
+Multiprocessor	                     Multiple CPUs, shared memory
+Multicomputer	                     Independent systems, networked
+
+
+
+Like a pro. 💡
+
+
+
+
+
+____________________________________________________________________________________
+
+
+</pre>
+    </div>
+
+    <div class="unit" id="unit3"data-aos="fade-right">
+      <h2>Unit 3 – Memory Decoded</h2>
+      <pre>🧠 Hierarchy-
+
+
+🧠 Super Concept Notes: Memory Organization
+📍 1. Memory Hierarchy
+🔹 Concept:
+Different memory types organized by speed, cost, and capacity.
+
+🔼 Hierarchy (Top to Bottom):
+Registers – Fastest, smallest, expensive.
+
+Cache Memory
+
+Main Memory (RAM)
+
+Secondary Memory (HDD, SSD)
+
+Auxiliary Memory (CD, DVD, Tape)
+
+🧠 Master Points:
+As you go down, speed ↓, cost ↓, size ↑.
+
+Goal: Keep most frequently used data in faster memory.
+
+📍 2. Cache Memory
+🔹 Concept:
+Very fast memory placed between CPU and RAM.
+
+🔸 Types:
+L1 – Smallest, fastest (inside CPU).
+
+L2 – Bigger, slower than L1.
+
+L3 – Shared across cores (multi-core CPUs).
+
+🧠 Master Points:
+Stores frequently used instructions/data.
+
+Uses techniques like:
+
+Locality of Reference (Temporal & Spatial)
+
+Write-through / Write-back policies
+
+📍 3. Main Memory (Primary Memory)
+🔹 Components:
+DRAM (Dynamic RAM):
+
+Slower than SRAM.
+
+Needs to be refreshed.
+
+Used as main system memory (RAM).
+
+ROM (Read-Only Memory):
+
+Permanent memory; non-volatile.
+
+Stores BIOS, firmware.
+
+Types: PROM, EPROM, EEPROM.
+
+🧠 Master Points:
+RAM = volatile memory (data lost when power off).
+
+ROM = retains data even after shutdown.
+
+📍 4. Secondary Memory
+🔹 Concept:
+Non-volatile storage used for long-term storage of programs/data.
+
+🔸 Examples:
+Hard Disk Drive (HDD)
+
+Solid State Drive (SSD)
+
+USB, Memory Cards
+
+🧠 Master Points:
+Much larger than main memory.
+
+Slower access time.
+
+Data remains even after power off.
+
+📍 5. Virtual Memory
+🔹 Concept:
+Portion of secondary memory used as main memory.
+
+🔸 How?
+OS swaps data between RAM ↔ HDD/SSD (using page files).
+
+🧠 Master Points:
+Allows execution of large programs on small RAM.
+
+Gives illusion of larger memory.
+
+Slows down performance compared to real RAM.
+
+📍 6. Auxiliary Memory
+🔹 Concept:
+External, removable storage.
+
+🔸 Examples:
+CD/DVD
+
+Magnetic Tapes
+
+External Hard Drives
+
+🧠 Master Points:
+Used for backup, transport.
+
+Very slow, but very cheap.
+
+Long-term storage.
+
+📍 7. Associative Memory (aka Content Addressable Memory - CAM)
+🔹 Concept:
+Memory where data is accessed by content, not by address.
+
+🧠 Master Points:
+Used in cache memory, TLB (Translation Lookaside Buffer).
+
+Faster search operations.
+
+Expensive to implement.
+
+<table>
+  <thead>
+    <tr>
+      <th>Memory Type</th>
+      <th>Speed</th>
+      <th>Volatile?</th>
+      <th>Cost</th>
+      <th>Capacity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Registers</td>
+      <td>Fastest</td>
+      <td>Yes</td>
+      <td>Very High</td>
+      <td>Very Low</td>
+    </tr>
+    <tr>
+      <td>Cache</td>
+      <td>Very Fast</td>
+      <td>Yes</td>
+      <td>High</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>RAM (DRAM)</td>
+      <td>Fast</td>
+      <td>Yes</td>
+      <td>Moderate</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>ROM</td>
+      <td>Moderate</td>
+      <td>No</td>
+      <td>Low</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Secondary (HDD)</td>
+      <td>Slow</td>
+      <td>No</td>
+      <td>Low</td>
+      <td>Very High</td>
+    </tr>
+    <tr>
+      <td>Auxiliary (CD)</td>
+      <td>Very Slow</td>
+      <td>No</td>
+      <td>Very Low</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Associative</td>
+      <td>Super Fast</td>
+      <td>Depends</td>
+      <td>Very High</td>
+      <td>Small</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+---
+
+🔥
+</pre>
+    </div>
+
+    <div class="unit" id="unit4"data-aos="slide-up">
+      <h2>Unit 4 – I/O Organization</h2>
+      <pre>🧩 Devices
+
+
+📍1. Peripheral Devices
+🔹 Concept:
+External hardware devices connected to the system for input, output, or storage.
+
+🧠 Master Points:
+Examples: Keyboard, Mouse, Printer, Scanner, Monitor.
+
+Classified into:
+
+Input Devices (e.g., keyboard)
+
+Output Devices (e.g., printer)
+
+I/O Devices (e.g., touchscreen, USB drive)
+
+📍2. I/O Interface
+🔹 Concept:
+A system that connects CPU and peripheral devices.
+
+🧠 Master Points:
+Handles communication between CPU and device.
+
+Contains: Data bus, Control signals, Address decoder.
+
+Each device uses a specific interface module.
+
+📍3. Modes of Transfer
+🔹 Types:
+Programmed I/O – CPU actively waits and handles data.
+
+Interrupt-driven I/O – Device interrupts CPU when ready.
+
+Direct Memory Access (DMA) – Transfer without CPU’s continuous involvement.
+
+🧠 Master Points:
+DMA is most efficient for large data transfer.
+
+Interrupt mode saves CPU time compared to Programmed I/O.
+
+📍4. Priority Interrupt
+🔹 Concept:
+Decides which device gets service first if multiple interrupts occur.
+
+🧠 Master Points:
+Fixed Priority: Predefined importance (e.g., printer over keyboard).
+
+Rotating Priority: Changes priority after each request to ensure fairness.
+
+Can be vectored (specific address) or non-vectored (default address).
+
+📍5. Direct Memory Access (DMA)
+🔹 Concept:
+Allows peripheral to read/write memory directly without CPU.
+
+🧠 Master Points:
+Managed by DMA Controller.
+
+CPU only starts and ends the process.
+
+Improves system performance in heavy data operations like file transfer, media streaming.
+
+📍6. Input-Output Processor (IOP)
+🔹 Concept:
+A dedicated processor for managing I/O operations.
+
+🧠 Master Points:
+Can execute its own I/O instructions.
+
+Works in parallel with CPU.
+
+Frees CPU for computation tasks while IOP handles data transfer.
+
+📍7. Serial Communication
+🔹 Concept:
+Data is transmitted one bit at a time over a single line.
+
+🧠 Master Points:
+Slower than parallel communication but suitable for long-distance.
+
+Examples: USB, RS-232, Bluetooth.
+
+Less wiring needed than parallel systems.
+
+📍8. I/O Controllers
+🔹 Concept:
+Hardware module that interfaces I/O devices with CPU.
+
+🧠 Master Points:
+Controls device operation.
+
+Manages data, status, and control signals.
+
+Converts CPU instructions into device-specific actions.
+
+📍9. Asynchronous Data Transfer
+🔹 Concept:
+Sender and receiver do not share a common clock.
+
+🧠 Master Points:
+Data is sent with start and stop bits for synchronization.
+
+Used in serial ports and communication systems.
+
+Less complex but slightly slower.
+
+📍10. Strobe Control vs Handshaking
+🔹 Concept:
+Techniques used to manage asynchronous communication between CPU and I/O devices.
+
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Description</th>
+      <th>Direction</th>
+      <th>Synchronization</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Strobe Control</td>
+      <td>Uses a single signal (strobe) to indicate data is ready</td>
+      <td>Unidirectional</td>
+      <td>No confirmation from receiver</td>
+    </tr>
+    <tr>
+      <td>Handshaking</td>
+      <td>Uses request and acknowledge signals for data transfer</td>
+      <td>Bidirectional</td>
+      <td>Ensures both sender and receiver are ready</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+____________________________________________________________________________________
+
+---
+
+🧠
+</pre>
+    </div>
+
+    <div class="unit" id="unit5"data-aos="flip-left">
+      <h2>Unit 5 – HIGH PERFORMANCE COMPUTING</h2>
+      <pre>📁 Parallel Processing
+
+
+📍1. Parallel Processing
+🔹 Concept:
+Execution of multiple instructions simultaneously using multiple processing units.
+
+🧠 Master Points:
+Increases system performance and throughput.
+
+Common in multi-core processors, supercomputers, and data centers.
+
+Tasks are divided and processed in parallel to save time.
+
+📍2. Amdahl’s Law
+🔹 Concept:
+Defines the maximum speedup achievable by improving only part of the system.
+
+🧠 Master Points:
+Formula:
+Speedup (S) = 1 / [ (1 - P) + (P / N) ]
+Where:
+
+P = portion of program that can be parallelized
+
+N = number of processors
+
+It shows limitation of parallelism — if 10% of program is sequential, full speedup can't be achieved.
+
+📍3. Pipelining
+🔹 Concept:
+Execution of multiple instruction stages in parallel.
+
+🧠 Master Points:
+Like an assembly line — different stages like Fetch, Decode, Execute, etc. are processed in parallel.
+
+Increases instruction throughput.
+
+Used in modern CPUs and GPUs.
+
+📍4. Flynn’s Classification
+🔹 Concept:
+A way to classify computer architectures based on number of instruction and data streams.
+
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Full Form</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SISD</td>
+      <td>Single Instruction Single Data</td>
+      <td>Traditional sequential computer</td>
+    </tr>
+    <tr>
+      <td>SIMD</td>
+      <td>Single Instruction Multiple Data</td>
+      <td>Same operation on multiple data (e.g., vector processors)</td>
+    </tr>
+    <tr>
+      <td>MISD</td>
+      <td>Multiple Instruction Single Data</td>
+      <td>Rare in practice; many instructions on same data</td>
+    </tr>
+    <tr>
+      <td>MIMD</td>
+      <td>Multiple Instruction Multiple Data</td>
+      <td>Different operations on different data (e.g., multi-core systems)</td>
+    </tr>
+  </tbody>
+</table>
+📍5. Space-Time Diagram
+🔹 Concept:
+A visual representation of how instructions or tasks execute over time in parallel systems.
+
+🧠 Master Points:
+X-axis = Time
+
+Y-axis = Processor stages or instructions
+
+Helps in visualizing pipelining efficiency and parallelism.
+
+Shows overlapping execution of multiple stages.
+
+📍6. Speedup Ratio
+🔹 Concept:
+It measures how much faster a parallel system performs compared to a single processor.
+
+🧠 Master Points:
+Formula:
+Speedup = Time (without improvement) / Time (with improvement)
+
+Ideal speedup is equal to the number of processors, but in practice it’s lower due to overheads and sequential parts.
+
+📍7. Arithmetic Pipeline
+🔹 Concept:
+Pipelining technique for arithmetic operations like addition, multiplication, division.
+
+🧠 Master Points:
+Used in floating-point units and math co-processors.
+
+Divides operation into stages: Fetch, Multiply, Normalize, Round, Store.
+
+Improves performance for large mathematical computations.
+
+📍8. Instruction Pipeline
+🔹 Concept:
+Pipelining applied to instruction execution cycle.
+
+🧠 Master Points:
+Stages:
+
+Fetch – get instruction
+
+Decode – understand it
+
+Execute – perform operation
+
+Memory Access – read/write memory
+
+Write Back – save result
+
+Increases instruction throughput.
+
+May suffer from pipeline hazards (structural, data, control).
+
+
+---
+
+
+
+---
+
+🧠
+</pre>
+<script>
+  document.getElementById('toggle-dark').addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const btn = document.getElementById('toggle-dark');
+    if (document.body.classList.contains('dark')) {
+      btn.innerHTML = '☀️ Light Mode';
+    } else {
+      btn.innerHTML = '🌙 Dark Mode';
+    }
+  });
+</script>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devansh's JAVA Notes</title>
+  <style>
+body.dark {
+  background: linear-gradient(to bottom right, #121212, #1e1e1e);
+  color: #e0e0e0;
+}
+
+body.dark header {
+  background: linear-gradient(to right, #FF7F7F, #311b92);
+}
+
+body.dark nav {
+  background: #2a2a2a;
+}
+
+body.dark nav button {
+  background: #FF7276;
+}
+
+body.dark nav button:hover {
+  background: #512da8;
+}
+
+body.dark .content {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+body.dark .unit pre {
+  background: #2c2c2c;
+  color: #fff;
+}
+
+body.dark .unit h2 {
+  color: #f48fb1;
+  border-bottom: 2px solid #ba68c8;
+}
+
+body.dark .insta-link {
+  background-color: #4a148c;
+  color: #fff;
+}
+
+body.dark .insta-link:hover {
+  background-color: #6a1b9a;
+}
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e3f2fd, #fce4ec);
+      color: #212121;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #8e24aa, #6a1b9a);
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #ede7f6;
+      padding: 1rem;
+      gap: 12px;
+    }
+    nav button {
+      background: #7e57c2;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #5e35b1;
+    }
+    .content {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    .unit {
+      display: none;
+    }
+    .unit.active {
+      display: block;
+    }
+    .unit pre {
+      white-space: pre-wrap;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3e5f5;
+      padding: 1rem;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+    .unit h2 {
+      color: #4a148c;
+      font-size: 2rem;
+      border-bottom: 2px solid #ce93d8;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+.insta-link {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #f8bbd0;
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+.insta-link a {
+  text-decoration: none;
+  color: #4a148c;
+}
+.insta-link:hover {
+  background-color: #f48fb1;
+}
+  </style>
+  <script>
+    function showUnit(unitId) {
+      document.querySelectorAll('.unit').forEach(el => el.classList.remove('active'));
+      document.getElementById(unitId).classList.add('active');
+    }
+  </script>
+<!-- AOS Library CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<!-- AOS Library JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+<body>
+<script>
+  AOS.init({
+    duration: 1000, // animation speed in ms
+    once: true      // only animate once when scrolling down
+  });
+</script>
+
+<div class="insta-link">
+  <a href="https://www.instagram.com/_devansh_088" target="_blank">📸 @_devansh_088</a>
+</div>
+
+
+  <header>
+    <h1>Devansh's Java OOPS Notes</h1>
+<button id="toggle-dark" style="
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 8px 14px;
+  background: #fff;
+  color: #4a148c;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+">🌙 Dark Mode</button>
+
+    <p>Select a unit to view detailed notes 📚</p>
+  </header>
+  <nav>
+    <button onclick="showUnit('unit1')">Unit 1</button>
+    <button onclick="showUnit('unit2')">Unit 2</button>
+    <button onclick="showUnit('unit3')">Unit 3</button>
+    <button onclick="showUnit('unit4')">Unit 4</button>
+    <button onclick="showUnit('unit5')">Unit 5</button>
+  </nav>
+  <div class="content">
+    <div class="unit active" id="unit1"data-aos="fade-up">
+      <h2>Unit 1 –  JAVA OOPS Introduction</h2>
+      <pre>🖥️  Introduction
+
+
+
+
+
+
+📘 History of Java
+
+• Developed by James Gosling at Sun Microsystems in the early 1990s
+• Initially named Oak, renamed to Java in 1995
+• Designed for embedded systems and networked devices
+• Became popular for platform-independent applications thanks to JVM
+
+🌐 Java and the Internet
+
+• Java's features like Security, Portability, and Dynamic Linking make it ideal for internet use
+• Supports Applet and Web-based applications
+• Can run on any platform via JVM—"write once, run anywhere" philosophy
+
+🖼️ Java Applets and Applications
+
+• Applet: Small Java programs that run inside browsers
+• Application: Standalone Java programs run from the command line or GUI
+• Applets use the AWT (Abstract Window Toolkit) for GUI elements
+• Applications use classes from packages like javax.swing, java.util, etc.
+
+🌟 Features of Java
+
+• Object-Oriented
+• Platform Independent (via JVM)
+• Robust and Secure
+• Multithreaded
+• Distributed (supports networking)
+• Dynamic and Portable
+• High Performance with Just-In-Time compilation
+
+🎯 Basics of OOP in Java
+
+• Everything is based on objects and classes
+• Core principles:
+▫️ Encapsulation
+▫️ Inheritance
+▫️ Polymorphism
+▫️ Abstraction
+
+🆚 How Java Differs from C and C++
+
+• Java doesn’t support pointers, structs, unions, or operator overloading
+• No multiple inheritance using classes (uses interfaces instead)
+• Uses Garbage Collection instead of manual memory handling
+• Fully object-oriented, unlike C++
+• No main() outside a class—everything lives inside classes
+
+🏗️ Java Program Structure
+
+• Organized into classes and methods
+• All code inside class blocks
+• Starts execution from main() method
+• Uses packages for organizing classes
+🧪 Simple Java Program Example
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, Devansh!");
+    }
+}
+
+
+🧩 Java Tokens
+
+• Smallest building blocks in Java
+• Types:
+▫️ Keywords (class, int, static)
+▫️ Identifiers (variable/method names)
+▫️ Literals ("text", 5, true)
+▫️ Operators (+, ==, /)
+▫️ Separators ({}, ;, ())
+
+
+📜 Java Statements
+
+• A single logical unit of execution
+• Example:
+▫️ Declaration: int a = 5;
+▫️ Assignment: a = 10;
+▫️ Control: if (a > 5) {...}
+
+🧠 Java Virtual Machine (JVM)
+
+• Executes compiled bytecode
+• Provides platform independence
+• Handles memory management and security
+• Converts .class files (compiled) into machine-level instructions
+
+🖥️ Command Line Arguments
+
+• Passed via terminal when executing Java program
+• Example:
+java MyProgram arg1 arg2
+
+
+• Retrieved using String[] args in main() method
+
+🔢 Constants, Variables, and Data Types
+
+• Constants: Defined with final keyword
+• Variables: Named memory locations
+• Data Types:
+▫️ Primitive: int, float, char, boolean
+▫️ Reference: Arrays, Objects, etc.
+
+🌀 Type Casting
+
+• Implicit: int to float
+• Explicit: (int) 4.5 converts float to int
+• Used to change one data type into another for operations
+➕ Operators and Expressions
+• Arithmetic: +, -, *, /
+• Relational: ==, !=, <, >
+• Logical: &&, ||, !
+• Assignment: =, +=, -=
+
+🔀 Decision Making and Branching
+
+• Conditional logic to control flow
+• Tools:
+▫️ if, if-else, else-if
+▫️ switch-case
+▫️ Looping structures (for, while, do-while)
+• Nesting and chaining allow complex decision control
+
+
+____________________________________________________________________________________
+
+🤓
+
+    </div>
+
+    <div class="unit" id="unit2"data-aos="zoom-in">
+      <h2>Unit 2 –CORE JAVA PROGRAMMING </h2>
+      <pre>🔁Methods and Class
+
+Like a pro. 💡
+
+
+
+💫 Type Casting
+
+• Type casting means converting a value from one data type to another.
+• Two types:
+🔸 Implicit Casting – Automatically converts smaller to larger types (e.g., int to float)
+🔸 Explicit Casting – Manually force conversion (e.g., (int) 5.6)
+
+🧮 Operators and Expressions
+
+• Operators are symbols used to perform operations on variables/values.
+• Types of Operators:
+🔸 Arithmetic: +, -, *, /, %
+🔸 Relational: ==, !=, <, >, <=, >=
+🔸 Logical: &&, ||, !
+🔸 Bitwise: &, |, ^, <<, >>
+🔸 Assignment: =, +=, -=, *=, /=
+
+• Expressions are combinations of variables, values, and operators that produce a result.
+
+🔀 Decision Making and Branching
+
+• Control flow structures that guide program execution based on conditions.
+• Tools:
+🔸 if, if-else, else-if – Conditional blocks
+🔸 switch-case – Multiple possible cases
+🔸 Ternary operator – condition ? true_result : false_result;
+
+🎯 Classes, Objects and Methods
+
+• Class: Blueprint for objects—defines properties and behavior
+• Object: Instance of a class—created using new keyword
+• Method: Function inside a class defining some behavior
+🔸 Syntax: returnType methodName(parameters) { // code }
+
+🏗️ Constructors
+
+• Special method to initialize objects
+• Same name as class, no return type
+• Types:
+🔸 Default Constructor
+🔸 Parameterized Constructor
+🔸 Copy Constructor (manually created in Java)
+
+📌 Static Members
+
+• Belong to class, not individual objects
+• static keyword used
+• Useful for constants, counters, shared utilities
+🔸 Accessed using: ClassName.member
+
+🧠 Nesting of Methods
+
+• In Java, methods cannot be nested directly inside each other
+• However, we can call one method from inside another
+🔸 Example: calculate() calls sum()
+
+🧬 Inheritance
+
+• Allows one class to acquire properties of another
+• Achieved using extends keyword
+🔸 class Child extends Parent { ... }
+
+🔄 Overriding Methods
+
+• Subclass provides specific implementation of a method declared in superclass
+• Use @Override annotation
+• Method signature must match exactly
+
+🛡️ final Variables and Methods
+
+• final keyword prevents changes
+🔸 Final Variable: Value can't be reassigned
+🔸 Final Method: Cannot be overridden in subclass
+
+🚫 Final Classes
+
+• Class declared final cannot be inherited
+🔸 Ensures immutability or security
+
+🧹 Finalize Method
+
+• finalize() is called before object is garbage collected
+• Used to clean up resources
+• Syntax:
+protected void finalize() throws Throwable {
+    // cleanup code
+}
+
+
+🧩 Abstract Methods and Classes
+
+• Abstract Method: No body—only declaration
+• Abstract Class: Can contain abstract and non-abstract methods
+• Used to enforce blueprint for subclasses
+🔸 Declared using abstract keyword
+
+
+
+____________________________________________________________________________________
+
+
+</pre>
+    </div>
+
+    <div class="unit" id="unit3"data-aos="fade-right">
+      <h2>Unit 3 – INTERFACES AND API</h2>
+      <pre>🧠 Interfaces – Overview
+
+---
+
+
+---
+
+🧩 **Interfaces**
+
+✨ Introduction  
+• Interface is a blueprint of a class—contains method declarations but no implementation  
+• Helps achieve **multiple inheritance** in Java
+
+✨ Defining Interfaces  
+
+• Use `interface` keyword  
+```java
+interface MyInterface {
+    void show();
+}
+```
+
+✨ Implementing Interfaces 
+ 
+• Use `implements` keyword  
+
+```java
+class Demo implements MyInterface {
+    public void show() {
+        System.out.println("Implemented show()");
+    }
+}
+```
+
+✨ Extending Interfaces  
+• One interface can extend another  
+```java
+interface A {
+    void methodA();
+}
+interface B extends A {
+    void methodB();
+}
+```
+
+✨ Accessing Interface Variables 
+ 
+• Variables are **public, static, final** by default  
+• Access via `InterfaceName.variableName`
+
+---
+
+📦 **Packages**
+
+✨ Introduction  
+• Package is a collection of classes and interfaces grouped together  
+• Helps organize code and avoid name conflicts
+
+✨ Java API Packages  
+• Built-in packages like `java.lang`, `java.util`, `java.io`  
+• Provide ready-to-use classes
+
+✨ Using System Packages  
+• Import with `import` statement  
+```java
+import java.util.Scanner;
+```
+
+✨ Naming Conventions  
+• Package names are lowercase  
+• Often follow domain-style reverse naming (`com.company.project`)
+
+✨ Creating Packages  
+```java
+package mypack;
+class Demo { ... }
+```
+
+✨ Accessing a Package  
+• Import package in other classes  
+• Use full class reference if not imported
+
+✨ Using a Package  
+• After compiling, use directory matching package name  
+• Set CLASSPATH if needed
+
+✨ Adding a Class to a Package  
+• Include class in the same `.java` file or same directory with matching package declaration
+
+✨ Hiding Classes  
+• Use **default access modifier** (no `public`) to restrict visibility outside package
+
+---
+
+📊 **Arrays, String, and Vectors**
+
+✨ Arrays  
+• Fixed-size collection of similar data type  
+• Syntax: `int[] arr = new int[5];`  
+• Access via indices: `arr[0]`
+
+✨ Strings  
+• Java uses `String` class (immutable)  
+• Created using literals or `new` keyword  
+• Common methods: `.length()`, `.charAt()`, `.substring()`, `.equals()`
+
+✨ Vectors  
+• Part of `java.util` package  
+• Dynamic array (can grow/shrink)  
+```java
+Vector<Integer> v = new Vector<>();
+```
+
+---
+
+🔤 **String Handling**
+
+• Powerful methods available in `String` and `StringBuilder` classes  
+• Immutable strings = every change creates a new object  
+• Mutable alternatives: `StringBuffer`, `StringBuilder`
+
+Common operations: 
+ 
+▫️ Concatenation – `+` or `.concat()`  
+▫️ Comparison – `.equals()`, `compareTo()`  
+▫️ Search – `.indexOf()`, `.contains()`  
+▫️ Modification – `.replace()`, `.toUpperCase()`, `.trim()`
+
+---
+
+🎁 **Wrapper Classes**
+
+• Java provides classes for primitive types—called **Wrapper Classes**  
+• Used for **conversion**, **object manipulation**, and **collections**
+
+| Primitive | Wrapper |
+|-----------|----------|
+| int       | Integer  |
+| float     | Float    |
+| boolean   | Boolean  |
+| char      | Character|
+
+✨ Auto-boxing  
+• Java automatically converts primitive → object  
+```java
+Integer x = 5; // int → Integer
+```
+
+✨ Unboxing  
+• Object → primitive automatically  
+```java
+int y = x; // Integer → int
+```
+
+---
+
+✨
+
+🔥
+</pre>
+    </div>
+
+    <div class="unit" id="unit4"data-aos="slide-up">
+      <h2>Unit 4 – Error Handling </h2>
+      <pre>🧩 Managing Error
+
+
+
+
+
+---
+
+🧱 **Managing Errors and Exceptions**
+
+✨ Introduction  
+
+• Errors and exceptions are issues that arise during program execution  
+• **Errors**: Serious problems that applications shouldn’t try to catch  
+• **Exceptions**: Manageable conditions that can be handled during runtime
+
+⚡ Types of Errors  
+
+• **Compile-Time Errors**: Syntax errors, type mismatches  
+• **Run-Time Errors**: Occur during execution—e.g., divide by zero  
+• **Logical Errors**: Program compiles and runs, but gives incorrect output
+
+🎯 What Are Exceptions?
+  
+• Exceptions are objects representing an abnormal event  
+• All exception classes extend from `Throwable`  
+ ▫️ `Exception`: Recoverable (e.g., file not found)  
+ ▫️ `Error`: Irrecoverable (e.g., out of memory)
+
+🛠️ Syntax of Exception Handling  
+```java
+try {
+    // risky code
+} catch (ExceptionType name) {
+    // handling code
+} finally {
+    // cleanup code
+}
+```
+
+🧃 Multiple Catch Statements  
+
+• Java allows catching multiple exceptions separately  
+```java
+try {
+    // code
+} catch (ArithmeticException e) {
+    // handle arithmetic
+} catch (ArrayIndexOutOfBoundsException e) {
+    // handle array issues
+}
+```
+
+🧹 Using finally Statement  
+
+• `finally` block always executes—used for resource cleanup  
+• Even if exception occurs or not, or if `return` is called
+
+🚀 Throwing Our Own Exceptions  
+• You can create and throw custom exceptions using `throw` keyword  
+```java
+throw new MyCustomException("Error happened");
+```
+
+🔍 Using Exceptions for Debugging  
+• Helps isolate faulty code  
+• Stack trace shows where exception occurred  
+• You can log exceptions for analysis
+
+---
+
+🔄 **Multithreaded Programming**
+
+🌀 Introduction  
+
+• Java supports multiple threads executing independently  
+• Thread = lightweight subprocess, part of a process
+
+🔧 Creating Threads  
+Two ways:  
+1. By **extending Thread class**  
+```java
+class MyThread extends Thread {
+    public void run() { ... }
+}
+```
+
+2. By **implementing Runnable interface**  
+```java
+class MyRunnable implements Runnable {
+    public void run() { ... }
+}
+```
+
+🧱 Extending the Thread Class  
+• `Thread` class has built-in methods: `start()`, `sleep()`, `getName()`  
+• `start()` initiates a new thread that calls `run()` internally
+
+🛑 Stopping and Blocking a Thread  
+• `stop()` is deprecated (unsafe)  
+• Threads can be paused using `sleep()`  
+• `join()` makes one thread wait for another
+
+📈 Life Cycle of a Thread  
+
+1. **New** → created  
+2. **Runnable** → ready for execution  
+3. **Running** → executing `run()` method  
+4. **Blocked/Waiting** → waiting for resource or signal  
+5. **Terminated** → finished execution
+
+🛠 Using Thread Methods  
+
+• `start()` – begins execution  
+• `sleep(ms)` – pauses for milliseconds  
+• `join()` – wait for another thread  
+• `yield()` – pauses temporarily to give chance to others  
+• `isAlive()` – checks if thread is still running
+
+🚨 Thread Exceptions  
+
+• If exceptions are not handled in threads, it may terminate unexpectedly  
+• Use `try-catch` inside `run()` method to safeguard
+
+📊 Thread Priority 
+ 
+• Java allows setting thread priority: 1 (MIN) to 10 (MAX)  
+• Default is 5 (NORM_PRIORITY)  
+• Influences scheduling but doesn’t guarantee exact behavior
+
+🛡 Synchronization  
+
+• Multiple threads accessing shared data can cause inconsistency  
+• Use `synchronized` keyword to lock methods/blocks  
+```java
+synchronized void increment() {
+    count++;
+}
+```
+
+---
+
+ 😤📘✨
+
+____________________________________________________________________________________
+
+---
+
+🧠
+</pre>
+    </div>
+
+    <div class="unit" id="unit5"data-aos="flip-left">
+      <h2>Unit 5 – Input / Output</h2>
+      <pre>📁 INTRO
+
+
+---📤 Introduction to Java I/O
+
+• Java provides a stream-based mechanism to handle input and output of data
+• Supports various data sources: files, keyboards, networks, etc.
+• Based on java.io and java.nio packages
+
+🌊 Concept of Streams
+
+• A stream is a sequence of data
+• Two types:
+🔸 Input Stream – for reading data
+🔸 Output Stream – for writing data
+
+🧱 Stream Classes
+
+• Base classes for stream handling:
+🔸 InputStream and OutputStream – for byte streams
+🔸 Reader and Writer – for character streams
+• All specific classes inherit from these base classes
+
+🔣 Byte Stream Classes
+
+• Handle binary data (images, videos, etc.)
+• Common classes:
+🔸 FileInputStream – read binary data from file
+🔸 FileOutputStream – write binary data to file
+• Work with raw bytes byte[]
+
+🔡 Character Stream Classes
+
+• Handle textual (character) data
+• Common classes:
+🔸 FileReader – read text file
+🔸 FileWriter – write text file
+• Support Unicode and encoding
+
+🚀 Using Streams
+
+• Streams must be opened before use and closed after
+• Use try-with-resources for auto-closing
+try (FileReader fr = new FileReader("file.txt")) {
+    // read data
+}
+
+
+📦 Other Useful I/O Classes
+
+• BufferedReader, BufferedWriter – fast access with buffer
+• PrintWriter – easy printing to file
+• Scanner – simple reading from file or input stream
+• DataInputStream & DataOutputStream – read/write primitive types
+
+📁 Using the File Class
+
+• Located in java.io
+• Represents file or directory in the system
+• Useful methods:
+🔸 exists(), getName(), length(), delete(), createNewFile()
+File file = new File("data.txt");
+if (file.exists()) {
+    System.out.println("File found!");
+}
+
+
+🛑 Input/Output Exceptions
+
+• I/O operations can fail → Java throws checked exceptions
+• Common exceptions:
+🔸 IOException – general I/O issues
+🔸 FileNotFoundException – file not found
+🔸 EOFException – end of file reached unexpectedly
+• Must be handled using try-catch blocks
+
+🧪 Creation of Files
+
+• Use File class + createNewFile() method
+File myFile = new File("newfile.txt");
+if (myFile.createNewFile()) {
+    System.out.println("File created!");
+}
+
+
+
+
+
+
+
+
+---
+
+🧠
+</pre>
+<script>
+  document.getElementById('toggle-dark').addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const btn = document.getElementById('toggle-dark');
+    if (document.body.classList.contains('dark')) {
+      btn.innerHTML = '☀️ Light Mode';
+    } else {
+      btn.innerHTML = '🌙 Dark Mode';
+    }
+  });
+</script>
+
+    </div>
+  </div>
+</body>
+</html>

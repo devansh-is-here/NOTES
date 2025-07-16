@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devansh's NAST Notes</title>
+  <style>
+body.dark {
+  background: linear-gradient(to bottom right, #121212, #1e1e1e);
+  color: #e0e0e0;
+}
+
+body.dark header {
+  background: linear-gradient(to right, #4a148c, #311b92);
+}
+
+body.dark nav {
+  background: #2a2a2a;
+}
+
+body.dark nav button {
+  background: #673ab7;
+}
+
+body.dark nav button:hover {
+  background: #512da8;
+}
+
+body.dark .content {
+  background: #1f1f1f;
+  color: #fff;
+}
+/
+body.dark .unit pre {
+  background: #2c2c2c;
+  color: #fff;
+}
+
+body.dark .unit h2 {
+  color: #f48fb1;
+  border-bottom: 2px solid #ba68c8;
+}
+
+body.dark .insta-link {
+  background-color: #4a148c;
+  color: #fff;
+}
+
+body.dark .insta-link:hover {
+  background-color: #6a1b9a;
+}
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e3f2fd, #fce4ec);
+      color: #212121;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #8e24aa, #6a1b9a);
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #ede7f6;
+      padding: 1rem;
+      gap: 12px;
+    }
+    nav button {
+      background: #7e57c2;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #5e35b1;
+    }
+    .content {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    .unit {
+      display: none;
+    }
+    .unit.active {
+      display: block;
+    }
+    .unit pre {
+      white-space: pre-wrap;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3e5f5;
+      padding: 1rem;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+    .unit h2 {
+      color: #4a148c;
+      font-size: 2rem;
+      border-bottom: 2px solid #ce93d8;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+.insta-link {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #f8bbd0;
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+.insta-link a {
+  text-decoration: none;
+  color: #4a148c;
+}
+.insta-link:hover {
+  background-color: #f48fb1;
+}
+  </style>
+  <script>
+    function showUnit(unitId) {
+      document.querySelectorAll('.unit').forEach(el => el.classList.remove('active'));
+      document.getElementById(unitId).classList.add('active');
+    }
+  </script>
+<!-- AOS Library CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<!-- AOS Library JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+<body>
+<script>
+  AOS.init({
+    duration: 1000, // animation speed in ms
+    once: true      // only animate once when scrolling down
+  });
+</script>
+
+<div class="insta-link">
+  <a href="https://www.instagram.com/_devansh_088" target="_blank">📸 @_devansh_088</a>
+</div>
+
+
+  <header>
+    <h1>Devansh's Operating System Notes</h1>
+<button id="toggle-dark" style="
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 8px 14px;
+  background: #fff;
+  color: #4a148c;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+">🌙 Dark Mode</button>
+
+    <p>Select a unit to view detailed notes 📚</p>
+  </header>
+  <nav>
+    <button onclick="showUnit('unit1')">Unit 1</button>
+    <button onclick="showUnit('unit2')">Unit 2</button>
+    <button onclick="showUnit('unit3')">Unit 3</button>
+    <button onclick="showUnit('unit4')">Unit 4</button>
+    <button onclick="showUnit('unit5')">Unit 5</button>
+  </nav>
+  <div class="content">
+    <div class="unit active" id="unit1"data-aos="fade-up">
+      <h2>Unit 1 – 🔹 Modeling & Error Fundamentals in Numerical Analysis
+
+</h2>
+      <pre>🖥️ Mathematical Modeling
+
+
+
+---
+
+📘 **UNIT NAME**  
+🔹 Mathematical Modeling and Error Analysis in Engineering
+
+---
+
+🧠 **1. Mathematical Modeling and Engineering Problem Solving**
+
+🟣 A Simple Mathematical Model  
+
+• A mathematical model is a set of equations that describes the behavior of a physical system  
+• It involves variables (inputs), parameters (fixed values), and outputs  
+• Example: Ohm’s Law → \( V = IR \) models electrical resistance
+
+🟣 Use in Engineering  
+
+• Used to predict, analyze, and optimize systems  
+• Common areas: fluid flow, heat transfer, stress-strain analysis, vibration, control systems
+
+---
+
+🌐 **2. Conservation Laws and Engineering Problems**
+
+🟣 Conservation Principles  
+
+• Fundamental laws that describe the constancy of physical quantities  
+ ▪️ **Mass Conservation** – total mass remains constant in closed systems  
+ ▪️ **Momentum Conservation** – Newton’s Second Law  
+ ▪️ **Energy Conservation** – first law of thermodynamics  
+• These laws are converted into differential or algebraic equations for modeling
+
+🟣 Application  
+
+• Fluid mechanics, thermodynamics, electrical circuits, chemical reactions
+
+---
+
+📏 **3. Approximations and Round-Off Errors**
+
+🟣 Significant Figures
+  
+• Reflects digits in a number that carry meaning for precision  
+ ▪️ Leading zeros = not significant  
+ ▪️ Captive zeros (between digits) = significant  
+ ▪️ Trailing zeros with decimal = significant  
+• Rules help identify correct precision in calculations
+
+🟣 Accuracy vs Precision  
+
+• **Accuracy** → closeness to the true value  
+• **Precision** → consistency between repeated measurements  
+• A system can be precise but not accurate (systematic error)
+
+🟣 Error Definitions  
+
+ ▪️ **True Error** = \( \text{True Value} - \text{Approximate Value} \)  
+ ▪️ **Relative Error** = \( \frac{\text{True Error}}{\text{True Value}} \)  
+ ▪️ **Percentage Error** = Relative Error × 100
+
+🟣 Round-Off Errors  
+
+• Occur due to limited number of digits in representation (finite precision)  
+• Example: storing π as 3.1416 instead of full 3.141592...
+
+---
+
+✂️ **4. Truncation Errors and Taylor Series**
+
+🟣 Truncation Errors
+  
+• Arise from approximating an infinite process with a finite number of terms  
+• Common in numerical differentiation and integration  
+ ▪️ Example: using first few terms of Taylor series instead of full expansion
+
+🟣 Taylor Series  
+
+• Represents functions as infinite series of derivatives  
+ ▫️ \( f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots \)  
+• Used to analyze error in approximations  
+• Higher-order terms represent truncation errors
+
+---
+
+🔁 **5. Error Propagation and Total Numerical Errors**
+
+🟣 Error Propagation  
+
+• Describes how errors in input affect output  
+• If variables are combined mathematically, their errors add up or amplify  
+ ▫️ \( \Delta f = \left| \frac{\partial f}{\partial x} \right| \Delta x + \left| \frac{\partial f}{\partial y} \right| \Delta y + \cdots \)
+
+🟣 Total Numerical Error
+  
+• Sum of all errors: truncation + round-off + input uncertainties  
+• Impacts simulation reliability and stability  
+• Needs to be minimized for accurate results
+
+---
+
+📉 **6. Formulation Errors and Data Uncertainty**
+
+🟣 Formulation Errors  
+
+• Arise when model assumptions don’t match reality  
+• May result from oversimplification or ignoring small factors  
+ ▫️ Example: ignoring friction in mechanical model
+
+🟣 Data Uncertainty  
+
+• Inaccurate or incomplete input data  
+• Caused by measurement limitations, human error, sensor inaccuracies  
+• Requires sensitivity analysis to evaluate impact on results
+
+---
+
+
+
+
+
+
+
+
+____________________________________________________________________________________
+
+🤓
+
+    </div>
+
+    <div class="unit" id="unit2"data-aos="zoom-in">
+      <h2>Unit 2 – Root Approximation & Polynomial Interpolation
+
+</h2>
+      <pre>🔁 
+
+Like a pro. 💡
+
+.
+
+---
+
+
+---
+
+🧠 **Solutions of Algebraic and Transcendental Equations**
+
+🟣 Bisection Method  
+
+• Based on **Intermediate Value Theorem**  
+• Root lies between interval [a, b] where `f(a)` and `f(b)` have opposite signs  
+• Midpoint: \( c = \frac{a + b}{2} \)  
+• Iteratively reduce interval until desired accuracy is reached  
+• Slow but **guaranteed convergence**
+
+🟣 Newton-Raphson Method  
+
+• Uses first-order Taylor series expansion  
+• Formula: \( x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} \)  
+• Fast convergence near root  
+• Requires **differentiable** function and good initial guess  
+• May diverge if guess is poor
+
+🟣 Regula-Falsi (False Position) Method 
+ 
+• Improves Bisection by using straight-line approximation  
+• Formula:  
+ \( x = \frac{a f(b) - b f(a)}{f(b) - f(a)} \)  
+• Faster than Bisection  
+• Still bounded between `a` and `b`
+
+🟣 Secant Method  
+
+• Similar to Newton-Raphson but uses approximate derivative  
+• Formula:  
+ \( x_{n+1} = x_n - f(x_n) \cdot \frac{x_n - x_{n-1}}{f(x_n) - f(x_{n-1})} \)  
+• Requires **two initial guesses**  
+• Faster than Bisection, no derivative needed  
+• Can diverge in some cases
+
+---
+
+📉 **Interpolation Techniques**
+
+🟣 Forward Difference
+  
+• Used when x-values are in **increasing order**  
+• Forward differences:  
+ ▫️ \( \Delta f(x) = f(x + h) - f(x) \)  
+• Supports Newton’s Forward Interpolation
+
+🟣 Backward Difference
+  
+• Used when x-values are in **decreasing order**  
+• Backward differences:  
+ ▫️ \( \nabla f(x) = f(x) - f(x - h) \)  
+• Supports Newton’s Backward Interpolation
+
+🟣 Newton’s Forward Difference Interpolation 
+ 
+• Formula:  
+ \( f(x) = f_0 + p \Delta f_0 + \frac{p(p-1)}{2!} \Delta^2 f_0 + \cdots \)  
+ where \( p = \frac{x - x_0}{h} \)  
+• Uses forward difference table
+
+🟣 Newton’s Backward Difference Interpolation  
+
+• Formula:  
+ \( f(x) = f_n + p \nabla f_n + \frac{p(p+1)}{2!} \nabla^2 f_n + \cdots \)  
+ where \( p = \frac{x - x_n}{h} \)  
+• Uses backward difference table
+
+🟣 Lagrange’s Interpolation  
+
+• Used for **unequal spacing** of x-values  
+• Formula:  
+ \( f(x) = \sum_{i=0}^{n} y_i \prod_{\substack{j=0 \\ j \ne i}}^{n} \frac{x - x_j}{x_i - x_j} \)  
+• No need for difference table  
+• Provides exact fit for polynomial through given points
+
+---
+
+
+
+
+
+
+____________________________________________________________________________________
+
+
+</pre>
+    </div>
+
+    <div class="unit" id="unit3"data-aos="fade-right">
+      <h2>Unit 3 – ITERATIVE SOLUTIONS</h2>
+      <pre>🧠 – Overview
+
+
+
+---
+
+
+---
+
+🧮 **Solution of Simultaneous Algebraic Equations (Linear)**
+
+🟣 Gauss-Jordan Method 
+ 
+• Eliminates variables row-wise to obtain identity matrix  
+• Extended version of Gaussian elimination  
+• Converts augmented matrix [A | B] into reduced row-echelon form  
+• Final matrix directly gives solutions without back substitution  
+
+✨ Key Steps:  
+
+▪️ Form augmented matrix 
+ 
+▪️ Apply row operations to make leading coefficient = 1  
+▪️ Eliminate other column elements using row operations  
+▪️ Result → diagonal matrix → values of variables
+
+🟣 Gauss-Seidel Method  
+
+• Iterative method for solving large linear systems  
+• Formula:  
+  \( x_i^{(k+1)} = \frac{1}{a_{ii}} \left( b_i - \sum_{j<i} a_{ij}x_j^{(k+1)} - \sum_{j>i} a_{ij}x_j^{(k)} \right) \)  
+• Starts with initial guess
+  
+• Updates each variable using latest computed values  
+• Faster than Jacobi; convergence depends on matrix type (diagonally dominant preferred)
+
+---
+
+🧪 **Numerical Differentiation and Integration**
+
+🟣 Numerical Differentiation  
+
+• Used when analytical differentiation is not possible  
+• Based on finite difference formulas  
+▪️ Forward Difference:  
+  \( f'(x) \approx \frac{f(x+h) - f(x)}{h} \)  
+▪️ Backward Difference:  
+  \( f'(x) \approx \frac{f(x) - f(x-h)}{h} \)  
+▪️ Central Difference (more accurate):  
+  \( f'(x) \approx \frac{f(x+h) - f(x-h)}{2h} \)
+
+🟣 Trapezoidal Rule  
+
+• Approximates area using trapezoids  
+▪️ Formula:  
+  \( \int_a^b f(x)\,dx \approx \frac{h}{2} [f(a) + 2f(x_1) + 2f(x_2) + \cdots + f(b)] \)  
+▪️ Moderate accuracy; best for linear functions
+
+🟣 Simpson’s 1/3rd Rule  
+
+• Fits parabola over 3 points  
+▪️ Formula:  
+  \( \int_a^b f(x)\,dx \approx \frac{h}{3} [f(x_0) + 4f(x_1) + 2f(x_2) + \cdots + f(x_n)] \)  
+▪️ Applies when n is even
+
+🟣 Simpson’s 3/10th Rule  
+
+• Uses cubic polynomial fit  
+▪️ Formula:  
+  \( \int_a^b f(x)\,dx \approx \frac{3h}{10} [f(x_0) + 5f(x_1) + 6f(x_2) + \cdots + f(x_n)] \)  
+▪️ Applicable when interval count is multiple of 3
+
+---
+
+📉 **Numerical Solution of Differential Equations (1st & 2nd Order)**
+
+🟣 Taylor Series Method  
+
+• Uses Taylor expansion to approximate solutions  
+▪️ Formula:  
+  \( y(x+h) = y(x) + hy'(x) + \frac{h^2}{2!}y''(x) + \cdots \)  
+▪️ Needs computation of higher-order derivatives  
+▪️ Accurate but complex for manual work
+
+🟣 Euler’s Method  
+
+• Simplest method using tangent line approximation  
+▪️ Formula:  
+  \( y_{n+1} = y_n + h f(x_n, y_n) \)  
+▪️ First-order accuracy  
+▪️ Easy but less accurate
+
+🟣 Modified Euler’s Method (Improved Euler or Heun’s)  
+
+• Corrects Euler by averaging slopes  
+▪️ Formula:  
+  1. Predictor: \( y^* = y_n + h f(x_n, y_n) \)  
+  2. Corrector:  
+  \( y_{n+1} = y_n + \frac{h}{2} [f(x_n, y_n) + f(x_{n+1}, y^*)] \)  
+▪️ Better accuracy
+
+🟣 Runge-Kutta Method (1st Order) 
+ 
+• Most popular for solving ordinary differential equations  
+▪️ RK-2 and RK-4 variants available  
+▪️ RK-4 Formula (high accuracy):  
+  • \( k_1 = h f(x_n, y_n) \)  
+  • \( k_2 = h f(x_n + \frac{h}{2}, y_n + \frac{k_1}{2}) \)  
+  • \( k_3 = h f(x_n + \frac{h}{2}, y_n + \frac{k_2}{2}) \)  
+  • \( k_4 = h f(x_n + h, y_n + k_3) \)  
+  • Final:  
+  \( y_{n+1} = y_n + \frac{1}{6}(k_1 + 2k_2 + 2k_3 + k_4) \)
+
+🟣 Runge-Kutta for 2nd Order Equations 
+ 
+• Reduce to two 1st order equations  
+• Apply RK method to both simultaneously  
+▪️ Example:  
+  Given \( y'' = f(x, y, y') \), let:  
+  ▫️ \( y' = z \)  
+  ▫️ \( z' = f(x, y, z) \)  
+• Solve system using RK steps
+
+---
+
+
+
+
+
+
+
+---
+
+🔥
+</pre>
+    </div>
+
+    <div class="unit" id="unit4"data-aos="slide-up">
+      <h2>Unit 4 – REGRESSION MODELS</h2>
+      <pre>🧩 Regressoin -
+
+
+---
+
+📘 **UNIT NAME**  
+🔹 Regression Models & Linear Optimization Techniques
+
+---
+
+📊 **Least-Squares Regression**
+
+🟣 Linear Regression  
+
+• Fits a straight line: \( y = a + bx \)  
+• Goal is to minimize the squared error between predicted and actual values  
+• Coefficients derived using:  
+ ▪️ \( b = \frac{n\sum xy - \sum x \sum y}{n\sum x^2 - (\sum x)^2} \)  
+ ▪️ \( a = \frac{\sum y - b\sum x}{n} \)  
+• Used for prediction, trend modeling
+
+🟣 Polynomial Regression  
+
+• Models nonlinear data using higher-degree polynomials  
+ ▫️ Equation: \( y = a_0 + a_1x + a_2x^2 + \cdots + a_nx^n \)  
+• Uses least-squares fit  
+• Can overfit for high degrees—best for moderate curves
+
+🟣 Multiple Linear Regression  
+
+• Includes multiple independent variables  
+ ▫️ \( y = a + b_1x_1 + b_2x_2 + \cdots + b_nx_n \)  
+• Solved using matrix equation:  
+ ▫️ \( \mathbf{B} = (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{Y} \)  
+• Powerful for real-world prediction models
+
+🟣 General Linear Least Squares  
+
+• Works with models that are linear in coefficients but nonlinear in variables  
+ ▫️ Example: \( y = a + b\sin(x) \) is linear in \( a, b \)  
+• Still uses matrix approach to minimize error
+
+🟣 Nonlinear Regression  
+
+• Model and parameters both nonlinear (e.g., \( y = ae^{bx} \))  
+• Solved using iterative numerical methods like Gauss-Newton  
+• Needs initial guesses and convergence criteria  
+• Used in growth models, signal processing, and real-world engineering
+
+---
+
+📐 **Linear Programming (LP)**
+
+🟣 Linear Optimization Problem 
+ 
+• Objective function:  
+ ▫️ Maximize or minimize \( Z = c_1x_1 + c_2x_2 + \cdots + c_nx_n \)  
+• Subject to constraints (equalities/inequalities):  
+ ▫️ \( a_{11}x_1 + a_{12}x_2 \le b_1 \), etc.  
+• Decision variables must satisfy non-negativity: \( x_i \ge 0 \)
+
+🟣 LP Formulation  
+
+• Identify decision variables  
+• Write objective function  
+• Define constraints  
+• Combine into structured mathematical model
+
+🟣 Graphical Solution Method 
+ 
+• Only applicable for 2-variable LP problems  
+• Steps:  
+ ▫️ Plot all constraints on graph  
+ ▫️ Identify feasible region (overlap zone)  
+ ▫️ Evaluate objective function at each corner point  
+ ▫️ Choose best point for optimization (max or min value)
+
+🟣 Basic Solution  
+
+• Found by setting \( n - m \) variables to zero (where `n` = total vars, `m` = constraints)  
+• Remaining variables solved using constraints  
+• May be feasible or infeasible depending on constraint satisfaction
+
+🟣 Feasible Solution  
+
+• Satisfies all constraints including non-negativity  
+• Lies inside or on the boundary of the feasible region  
+• Only feasible points are candidates for optimal solution
+
+---
+
+
+
+
+
+
+
+
+____________________________________________________________________________________
+
+---
+
+🧠
+</pre>
+    </div>
+
+    <div class="unit" id="unit5"data-aos="flip-left">
+      <h2>Unit 5 – PROBABILITY CONCEPTS</h2>
+      <pre>📁 Random Variables-
+
+
+
+---
+
+🎲 **Random Variables**
+
+🟣 Definition  
+
+• A **random variable** assigns numerical values to outcomes of a random process  
+• Denoted as \( X \), \( Y \), etc.  
+• Associated with a **probability distribution**
+
+🟣 Types of Random Variables  
+
+▪️ **Discrete Random Variables**  
+ • Takes countable values (e.g., 0, 1, 2,...)  
+ • Examples: number of heads, defective items  
+ • Represented by **probability mass function (PMF)**
+
+▪️ **Continuous Random Variables**  
+ • Takes infinite values over an interval (real numbers)  
+ • Examples: temperature, time, voltage  
+ • Represented by **probability density function (PDF)**
+
+---
+
+📐 **Probability Functions**
+
+
+🟣 Probability Density Function (PDF)  
+
+• Defines probability for **continuous variables**  
+• Area under PDF curve = 1  
+• Probability over range:  
+ ▫️ \( P(a \le X \le b) = \int_a^b f(x)\,dx \)
+
+🟣 Probability Distribution  
+
+• Describes how probabilities are distributed over possible values  
+• For discrete: table or PMF  
+• For continuous: PDF curve  
+• Helps model uncertainty in engineering outcomes
+
+---
+
+📊 **Expected Value and Variance**
+
+🟣 Expected Value (Mean)  
+
+• Represents average outcome  
+▪️ Discrete:  
+ ▫️ \( E[X] = \sum x_i P(x_i) \)  
+▪️ Continuous:  
+ ▫️ \( E[X] = \int_{-\infty}^{\infty} x f(x)\,dx \)  
+• Used for long-run behavior prediction
+
+🟣 Variance  
+
+• Measures spread of data from the mean  
+▪️ Formula:  
+ ▫️ \( \text{Var}(X) = E[X^2] - (E[X])^2 \)  
+• Standard deviation = square root of variance  
+• High variance → more uncertainty
+
+---
+
+📦 **Discrete Distributions**
+
+🟣 Uniform Distribution (Discrete)  
+
+• All outcomes equally likely  
+▪️ Example: fair die  
+▪️ Probability:  
+ ▫️ \( P(x) = \frac{1}{n} \), for all \( x \in \{x_1, x_2, ..., x_n\} \)  
+▪️ Application: random sampling, simulation
+
+🟣 Binomial Distribution  
+
+• Counts number of successes in \( n \) Bernoulli trials  
+▪️ Formula:  
+ ▫️ \( P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k} \)  
+▪️ Mean = \( np \), Variance = \( np(1 - p) \)  
+▪️ Application: defect analysis, signal success rate
+
+🟣 Poisson Distribution  
+
+• Models number of events in fixed time/space  
+▪️ Formula:  
+ ▫️ \( P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!} \)  
+▪️ Mean = Variance = \( \lambda \)  
+▪️ Application: call arrivals, traffic modeling
+
+🟣 Bernoulli Distribution  
+
+• Single trial with binary outcome  
+▪️ Values: 0 (failure), 1 (success)  
+▪️ Mean = \( p \), Variance = \( p(1 - p) \)  
+▪️ Application: digital signals, system on/off states
+
+---
+
+📈 **Continuous Distributions**
+
+🟣 Uniform Distribution (Continuous)  
+
+• Equal probability over interval [a, b]  
+▪️ PDF: \( f(x) = \frac{1}{b - a} \), for \( x \in [a, b] \)  
+▪️ Mean = \( \frac{a + b}{2} \), Variance = \( \frac{(b - a)^2}{12} \)  
+▪️ Application: random generation, simulation modeling
+
+🟣 Exponential Distribution  
+
+• Time between independent events  
+▪️ PDF: \( f(x) = \lambda e^{-\lambda x} \), \( x \ge 0 \)  
+▪️ Mean = \( \frac{1}{\lambda} \), Variance = \( \frac{1}{\lambda^2} \)  
+▪️ Memoryless property  
+▪️ Application: reliability, life-span of components
+
+🟣 Normal Distribution  
+
+• Bell-shaped curve; most common in nature  
+▪️ PDF:  
+ ▫️ \( f(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x - \mu)^2}{2\sigma^2}} \)  
+▪️ Mean = \( \mu \), Variance = \( \sigma^2 \)  
+▪️ 68-95-99 rule: area under curve  
+▪️ Application: measurement errors, quality control
+
+---
+
+🌟 **Applications in Engineering & Science**
+
+• Random variables → signal fluctuations, failure prediction  
+• Expected value → cost estimation, average performance  
+• Distributions → modeling noise, time-to-event, load patterns  
+• Variance → decision uncertainty, risk analysis  
+• Normal distribution → error modeling, process capability  
+• Poisson → telecom traffic, incident forecasting  
+• Binomial → system test outcomes, reliability testing
+
+---
+
+
+
+
+
+---
+
+🧠
+</pre>
+<script>
+  document.getElementById('toggle-dark').addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const btn = document.getElementById('toggle-dark');
+    if (document.body.classList.contains('dark')) {
+      btn.innerHTML = '☀️ Light Mode';
+    } else {
+      btn.innerHTML = '🌙 Dark Mode';
+    }
+  });
+</script>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devansh's OS Notes</title>
+  <style>
+body.dark {
+  background: linear-gradient(to bottom right, #121212, #1e1e1e);
+  color: #e0e0e0;
+}
+
+body.dark header {
+  background: linear-gradient(to right, #4a148c, #311b92);
+}
+
+body.dark nav {
+  background: #2a2a2a;
+}
+
+body.dark nav button {
+  background: #673ab7;
+}
+
+body.dark nav button:hover {
+  background: #512da8;
+}
+
+body.dark .content {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+body.dark .unit pre {
+  background: #2c2c2c;
+  color: #fff;
+}
+
+body.dark .unit h2 {
+  color: #f48fb1;
+  border-bottom: 2px solid #ba68c8;
+}
+
+body.dark .insta-link {
+  background-color: #4a148c;
+  color: #fff;
+}
+
+body.dark .insta-link:hover {
+  background-color: #6a1b9a;
+}
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e3f2fd, #fce4ec);
+      color: #212121;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #8e24aa, #6a1b9a);
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #ede7f6;
+      padding: 1rem;
+      gap: 12px;
+    }
+    nav button {
+      background: #7e57c2;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #5e35b1;
+    }
+    .content {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+    .unit {
+      display: none;
+    }
+    .unit.active {
+      display: block;
+    }
+    .unit pre {
+      white-space: pre-wrap;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3e5f5;
+      padding: 1rem;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+    .unit h2 {
+      color: #4a148c;
+      font-size: 2rem;
+      border-bottom: 2px solid #ce93d8;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+.insta-link {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #f8bbd0;
+  padding: 8px 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+.insta-link a {
+  text-decoration: none;
+  color: #4a148c;
+}
+.insta-link:hover {
+  background-color: #f48fb1;
+}
+  </style>
+  <script>
+    function showUnit(unitId) {
+      document.querySelectorAll('.unit').forEach(el => el.classList.remove('active'));
+      document.getElementById(unitId).classList.add('active');
+    }
+  </script>
+<!-- AOS Library CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<!-- AOS Library JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+<body>
+<script>
+  AOS.init({
+    duration: 1000, // animation speed in ms
+    once: true      // only animate once when scrolling down
+  });
+</script>
+
+<div class="insta-link">
+  <a href="https://www.instagram.com/_devansh_088" target="_blank">📸 @_devansh_088</a>
+</div>
+
+
+  <header>
+    <h1>Devansh's Operating System Notes</h1>
+<button id="toggle-dark" style="
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 8px 14px;
+  background: #fff;
+  color: #4a148c;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+">🌙 Dark Mode</button>
+
+    <p>Select a unit to view detailed notes 📚</p>
+  </header>
+  <nav>
+    <button onclick="showUnit('unit1')">Unit 1</button>
+    <button onclick="showUnit('unit2')">Unit 2</button>
+    <button onclick="showUnit('unit3')">Unit 3</button>
+    <button onclick="showUnit('unit4')">Unit 4</button>
+    <button onclick="showUnit('unit5')">Unit 5</button>
+  </nav>
+  <div class="content">
+    <div class="unit active" id="unit1"data-aos="fade-up">
+      <h2>Unit 1 – Operating System Introduction</h2>
+      <pre>🖥️ Operating System – Introduction
+
+
+
+
+
+ 🖥️ Operating System – Introduction
+
+ 📌 Definition
+An Operating System (OS) is a system software that acts as an intermediary between computer hardware and the user. It manages hardware resources and provides services to application software.
+
+- It controls hardware components like CPU, memory, input/output devices, etc.
+- Ensures efficient and fair resource usage among multiple programs.
+
+__________________________________________
+
+ 🎯 Design Goals of Operating System
+
+Operating systems are designed with specific goals that define their architecture and behavior:
+
+ ✔️ Primary Design Goals
+
+- Convenience: Make the computer system easy to use.
+- Efficiency: Maximize performance and resource utilization.
+- Ability to evolve: Should be flexible enough to accommodate hardware upgrades and new services.
+
+ ✔️ Secondary Goals
+
+- User Interface: Provide command-line and/or graphical interfaces.
+- Security and Privacy: Protect data and resources against unauthorized access.
+- Reliability and Fault Tolerance: Handle errors gracefully without crashing the system.
+- Scalability: Support small to large systems seamlessly.
+
+__________________________________________
+
+## 🕰️ Evolution of Operating Systems
+
+Operating systems have evolved significantly over time. Here's the historical perspective:
+
+| Generation | Era                    | Characteristics |
+|------------|------------------------|------------------|
+| First Gen  | 1940s–1950s            | No OS; manual machine operation; punched cards |
+| Second Gen | 1950s–1960s            | Simple batch systems; Job control languages |
+| Third Gen  | 1960s–1970s            | Multiprogramming; Time-sharing; General-purpose OS |
+| Fourth Gen | 1980s–Present          | Personal computers; GUI; Networking capabilities |
+| Fifth Gen  | Present/Future         | AI-based systems; Cloud OS; Real-time mobile OS |
+
+__________________________________________
+
+ 📦 Processing Techniques
+
+ 🔁 Batch Processing
+
+- Executes *a series of jobs* without user interaction.
+- Jobs are collected into batches with similar needs.
+- Example: Payroll processing, monthly bank statements.
+
+ ➕ Advantages:
+
+- Efficient for large volume repetitive tasks.
+- Reduced idle time for CPU.
+
+ ➖ Limitations:
+
+- No real-time interaction.
+- Errors discovered only after batch completion.
+
+__________________________________________
+
+ 🧠 Multiprogramming
+
+- Multiple programs are kept in memory simultaneously.
+- OS switches CPU between processes to improve utilization.
+
+ 💡 Concept:
+
+While one job waits for I/O, the CPU executes another job.
+
+➕ Advantages:
+
+- Increased throughput.
+- Better CPU utilization.
+
+ ➖ Challenges:
+
+- Requires sophisticated memory and process management.
+- Risk of deadlocks and resource conflicts.
+
+__________________________________________
+
+ ⌛ Time-Sharing
+
+- Extends multiprogramming with **interactive user sessions**.
+- CPU switches between users using small time slices (quantum).
+- Each user experiences a dedicated machine illusion.
+
+ ➕ Advantages:
+
+- Immediate feedback to user commands.
+- Shared system resources.
+
+ ➖ Limitations:
+
+- Complex scheduling.
+- Potential performance drop with many users.
+__________________________________________
+
+ 🧩 Structure of Operating System
+
+The structure defines how the OS components interact internally. Common structures include:
+
+ 🧱 1. Monolithic Structure
+
+- All OS services are part of a single large program.
+- Example: Early UNIX versions.
+
+ 🧩 2. Layered Structure
+
+- OS divided into hierarchical layers.
+- Each layer performs a specific function.
+- Example: THE Operating System.
+
+ 🧪 3. Microkernel
+
+- Core functionalities (process mgmt, memory mgmt) are in a minimal kernel.
+- Other services run in user space.
+- Example: QNX, Minix.
+
+ 🔗 4. Modular Structure
+
+- OS consists of independent modules that communicate.
+- Example: Linux kernel modules.
+
+ 🧠 5. Virtual Machine Structure
+
+- Provides multiple abstract machines on one physical hardware.
+- Example: VMware, Hyper-V.
+
+__________________________________________
+
+ 🛠️ Functions of Operating System
+
+🌟 Major Responsibilities
+- Process Management: Create, schedule, terminate processes.
+
+- Memory Management: Allocation, swapping, virtual memory.
+
+- File System Management: File organization, access, security.
+
+- Device Management: Manage I/O devices via device drivers.
+
+- Security Management: Authentication, access control, auditing
+.
+- User Interface Management: CLI or GUI interfaces.
+
+- Networking: Enable communication between systems.
+
+- Resource Allocation: Fair and efficient resource distribution.
+
+____________________________________________________________________________________
+
+🤓
+
+    </div>
+
+    <div class="unit" id="unit2"data-aos="zoom-in">
+      <h2>Unit 2 – Process Management</h2>
+      <pre>🔁Process Management in Operating Systems
+
+Like a pro. 💡
+
+
+
+🔁 Process Management in Operating Systems
+
+An **Operating System (OS)** handles multiple tasks concurrently, and this multitasking is enabled through effective **Process Management**. A *process* is a program in execution that needs CPU, memory, I/O, etc. for functioning.
+
+__________________________________________
+
+🚦 Process States
+
+Processes transition through various states during their lifecycle. The typical states are:
+
+| **State**                   | **Description** |
+|-----------------------------|-----------------|
+| **New**                 | Process is being created |
+| **Ready**        | Process is waiting to be assigned to the CPU |
+| **Running**           | Instructions are being executed |
+| **Waiting/Blocked* | Process is waiting for an I/O or resource |
+| **Terminated**         | Process has finished execution |
+
+🌀 Advanced OSs may include intermediate states like **Suspended** and **Ready Suspended**.
+
+__________________________________________
+
+ 🔄 State Transitions
+
+Processes change states based on system events:
+
+- New → Ready: After creation, process enters ready queue
+- Ready → Running: Scheduler selects process for execution
+- Running → Waiting: Process requests I/O or waits for event
+- Waiting → Ready: I/O complete or event occurs
+- Running → Terminated: Process finishes
+- Running → Ready: CPU is preempted due to time slice expiry
+
+📌 These transitions are governed by the **Process Scheduler**.
+
+__________________________________________
+
+ 📊 Process Control Block (PCB)
+
+The OS keeps track of all process info using a data structure called **Process Control Block (PCB)**.
+
+ 🔖 Key Components:
+- **Process ID (PID)**
+- **Process State**
+- **Program Counter**: Address of next instruction
+- **CPU Registers**
+- **Memory Management Info**: page tables, segment tables
+- **Accounting Info**: CPU used, execution time
+- **I/O Status Info**: Devices assigned, files opened
+
+📁 The PCB is essential for **Context Switching** and process scheduling.
+
+__________________________________________
+
+ 🔁 Context Switching
+
+**Context Switching** is the act of saving a process's state and loading another's so the CPU can be shared among processes.
+
+ ⛓ What gets switched?
+
+- Program counter
+- Registers
+- Stack pointers
+- Memory mapping info
+
+ ⚡ Overhead:
+It is time-consuming since CPU has to save and restore data repeatedly—but it’s crucial for multitasking and responsive systems.
+
+__________________________________________
+
+ 📅 Process Scheduling
+
+**Process Scheduling** decides which process to execute next using scheduling algorithms.
+
+ 🎯 Goals:
+
+- Maximize CPU utilization
+- Ensure fairness
+- Minimize waiting, turnaround, and response time
+
+ 🔧 Types of Scheduling:
+
+1. **Preemptive**: CPU can be taken away from a running process  
+   Example: Round-Robin, Shortest Remaining Time First (SRTF)
+
+2. **Non-preemptive**: Process runs until completion  
+   Example: FCFS (First-Come First-Serve), SJF (Shortest Job First)
+
+---
+
+ 🧵 Threads
+
+A **Thread** is the smallest unit of CPU scheduling—think of it as a lightweight process.
+
+ 🔍 Why Threads?
+
+- Processes may have multiple threads running tasks in parallel
+- Threads share code section, data section, OS resources
+
+ 📌 Types of Threads:
+
+- **User-Level Threads**: Managed by user libraries; OS unaware
+- **Kernel-Level Threads**: Managed directly by the OS
+
+🤹 Thread vs Process:
+
+| Feature       | Process | Thread |
+|---------------|---------|--------|
+| Overhead | High (separate memory) | Low (shared memory) |
+| Communication | Slower | Faster |
+| Crash impact | Doesn't affect others | May affect entire process |
+
+____________________________________________________________________________________
+
+
+</pre>
+    </div>
+
+    <div class="unit" id="unit3"data-aos="fade-right">
+      <h2>Unit 3 – Memory Management</h2>
+      <pre>🧠 Memory Management – Overview
+
+---
+
+
+ 🧠 Memory Management – Overview
+
+Memory management involves handling and optimizing the usage of system memory (RAM). The OS plays a central role in allocating memory to processes, tracking usage, and ensuring efficient access and protection.
+
+__________________________________________
+
+ 📍 Address Binding
+
+**Address Binding** is the process of mapping program instructions and data to physical memory addresses.
+
+
+Types of Binding:
+1. Compile-Time Binding-
+ 
+   - Compiler assigns physical addresses  
+   - Happens when the memory location is known before execution  
+   - No flexibility
+
+2. Load-Time Binding-
+
+   - Physical address determined when program is loaded  
+   - More flexible than compile-time
+
+3. Execution-Time Binding-
+
+   - Final address determined during execution  
+   - Requires **address translation mechanism** (MMU)
+
+---
+
+🔌 DYNAMIC LINKING AND LOADING:-
+
+🔄 Dynamic Loading-
+
+- Routines (like functions or libraries) are loaded only when required during execution
+- Reduces memory usage initially
+- Essential for large programs
+
+ 🔗 Dynamic Linking:-
+
+- Linking of external libraries occurs at **run time**, not compile time
+- Uses **shared libraries (DLLs or SOs)**
+
+__________________________________________
+
+ 🧾 Logical vs Physical Address-
+
+| Type | Description |
+|------|-------------|
+| Logical Address | Generated by CPU (also called virtual address) |
+| Physical Address| Actual address in RAM |
+| Mapping | Done by **Memory Management Unit (MMU)** using base and limit registers or page tables |
+
+__________________________________________
+
+ 📋 Contiguous Allocation
+
+Memory is assigned in one single continuous block.
+
+Techniques:-
+
+1. Single Partition Allocation: One process at a time
+
+2.Multiple Partition (Fixed/Variable):
+   - Fixed: Equal partitions
+   - Variable: Allocated based on process size
+
+Problems:
+
+- External Fragmentation
+- Limited flexibility
+__________________________________________
+
+⚠️ Fragmentation
+
+ 🧩 External Fragmentation-
+
+- Free memory exists but not in contiguous blocks
+- Happens in variable partition systems
+
+🧨 Internal Fragmentation-
+
+- Unused memory within allocated partition
+- Due to fixed-size partition being larger than process needs
+
+ 💡 Solution:
+- **Compaction** (for external)
+- Efficient allocation algorithms
+
+---
+
+ 📦 Paging
+
+Memory is divided into fixed-size blocks:
+- **Frames** → Physical Memory
+- **Pages** → Logical Memory
+
+ ✍️ Page Table
+Maps pages to frames. OS uses this for address translation.
+
+ ✅ Advantages:
+- Solves external fragmentation
+- Allows non-contiguous memory allocation
+⚠️ Disadvantage:
+- Overhead of page tables and translation
+
+__________________________________________
+
+ 🔀 Segmentation
+
+Memory is divided based on **logical divisions** like code, data, stack.
+
+- Each segment has "BASE" and "LIMIT" value
+- More natural to programmers
+
+ 🆚 Segmentation vs Paging
+
+| Feature | Paging | Segmentation |
+|--------|--------|--------------|
+| Division | Fixed-size pages | Variable logical segments |
+| View | Physical | Logical |
+| Fragmentation | Internal | External |
+
+__________________________________________
+
+ 🧬 Combined Systems: Segmentation + Paging
+
+Combines benefits of both:-
+
+- Segments divided into pages
+- Avoids external fragmentation
+- Example: Intel x86 architecture
+
+---
+
+🌐 Virtual Memory
+
+Allows execution of programs that require more memory than physically available using disk space.
+
+ Key Concepts:
+
+- OS uses a portion of disk (swap space) as **extended memory**
+- Pages not currently in use are stored here
+
+---
+
+ 📥 Demand Paging
+
+Pages are loaded into memory **only when needed**.
+
+- Pages not in memory cause a **page fault**
+- Reduces initial load time
+
+---
+
+⚠️ Page Fault
+
+Occurs when a referenced page is **not in memory**.
+
+ Handling Process:
+
+1. OS checks validity
+2. Finds free frame
+3. Swaps required page from disk
+4. Updates page table
+5. Restarts process instruction
+
+__________________________________________
+
+ 🔄 Page Replacement Algorithms
+
+Used when no free frame is available.
+
+| Algorithm | Description |
+|-----------|-------------|
+| FIFO | Oldest page removed |
+| LRU (Least Recently Used) | Page not used recently is removed |
+| Optimal| Page that won’t be used for longest future time |
+| Clock | Circular buffer-based approximation of LRU |
+
+---
+
+ 🌏 Global vs Local Allocation
+
+| Strategy | Description |
+|----------|-------------|
+| Global Allocation | Pages taken from any process |
+| Local Allocation| Pages only replaced within same process |
+
+Local = better isolation  
+Global = better overall utilization
+__________________________________________
+
+ 🔁 Thrashing
+
+Too much page faulting leads to **thrashing** where:
+- CPU spends more time swapping pages than executing processes  
+- Causes severe performance degradation
+
+ 💊 Solutions:-
+
+- Increase memory
+- Use better algorithms
+- Reduce degree of multiprogramming
+
+---
+
+📉 Working Set Model
+
+Used to limit thrashing.
+
+- Defines “working set” as the set of pages actively used
+- Tracks page usage within a fixed time window
+- OS ensures working set is always in memory
+
+---
+
+ 🔁 Paging (Wrap-up)
+
+- Efficient, flexible memory technique
+- Enables virtual memory
+- Requires careful page management and optimized replacement
+
+---
+
+🔥
+</pre>
+    </div>
+
+    <div class="unit" id="unit4"data-aos="slide-up">
+      <h2>Unit 4 – Concurrent Processes</h2>
+      <pre>🧩 Concurrent Processes
+
+
+
+
+ 🧩 **Concurrent Processes**
+
+Processes that execute simultaneously—either *truly in parallel* (multi-core systems) or *interleaved* (via context switching on single-core systems).
+
+ 🔄 Why Do We Need Them?
+
+- Improved CPU utilization
+- Enhanced throughput
+- Needed for multi-user and multitasking systems
+
+ ⚙️ Key Concepts
+
+- Concurrencyis not the same as parallelism.  
+  - Concurrency = managing multiple tasks at once  
+  - Parallelism = truly executing tasks simultaneously
+
+__________________________________________
+
+ 🔗 **Process Interaction**
+
+ 🫂 Types of Interactions
+
+1. Independent – no shared data/resources.
+2. Cooperating – share data/resources to perform tasks.
+
+ 🤝 Benefits of Cooperation
+
+- Information sharing
+- Computation speed-up
+- Modularity
+- Convenience
+
+---
+
+ 💾 Shared Data & Critical Section Problem ||-
+
+ ⚠️ Shared Data
+Processes access **common memory/data structures**; can lead to inconsistency if multiple write operations occur simultaneously.
+
+ 🔐 Critical Section
+A portion of code where shared resources are accessed. **Only one process should execute it at a time** to avoid race conditions.
+
+ 🧠 Critical Section Requirements:
+1. Mutual Exclusion
+2. Progress
+3. Bounded Waiting
+__________________________________________
+
+🚫 |Mutual Exclusion Techniques|-
+
+ 🔁 Busy Waiting
+Process repeatedly checks a condition to enter CS:
+```c
+while(flag != 0); // Wait till flag resets
+```
+
+- Disadvantages:- Wastes CPU cycles, increases overhead.
+
+ 🧰 Primitives:
+ `lock()` and `unlock()` functions
+Used to ensure only one process enters the CS.
+
+ Example (Using Mutex):
+```c
+mutex_lock(&m);
+// Critical Section
+mutex_unlock(&m);
+```
+
+__________________________________________
+
+ 🔄 **Process Synchronization**
+
+Ensures correct execution order when multiple processes access shared resources.
+
+ ⏳ When Is It Needed?
+- Maintaining consistency
+- Preventing race conditions
+- Coordinating dependent tasks
+
+---
+
+ 🧠 **Classical Problems of Synchronization**
+
+ 1️⃣ Producer–Consumer
+- Shared **bounded buffer**
+- Producer adds → consumer removes
+- Use **semaphores or mutex** to sync access
+
+ 2️⃣ Reader–Writer
+- Multiple readers allowed
+- Writers need exclusive access
+- Must prevent simultaneous writing and reading
+
+ 3️⃣ Dining Philosophers
+- Philosophers (processes) need 2 forks (resources)
+- Must prevent **deadlock** and **starvation**
+
+---
+
+ 🔣 **Semaphores**
+
+A synchronization primitive representing an integer variable.
+
+ ✅ Types:
+- Binary Semaphore (0 or 1)
+- Counting Semaphore (> 1)
+
+ ✍️ Operations:
+- `wait(S)` or `P(S)` → decrement & may block  
+- `signal(S)` or `V(S)` → increment & may wake up waiting processes
+
+ 🔄 Example:
+```c
+wait(mutex);
+// Critical Section
+signal(mutex);
+```
+
+__________________________________________
+
+ 🧭 **Monitors**
+
+High-level abstraction for process synchronization.
+
+- Encapsulates shared data and procedures
+- Ensures **only one process inside monitor** at a time
+- Often used in OOP languages like Java
+
+---
+
+ 🧮 **Conditional Critical Regions**
+
+Allows entering critical section *only when a condition is true*
+
+```c
+region v when B do S;
+```
+
+- Used when mutual exclusion depends on a specific boolean condition `B`.
+
+---
+ 🧨 **Deadlock**
+
+A state where **no process can proceed** because each is waiting for another to release resources.
+
+### 🎯 Four Necessary Conditions (Coffman Conditions):
+1. Mutual Exclusion  
+2. Hold and Wait 
+3. No Preemption 
+4. Circular Wait
+
+If all four hold simultaneously*, deadlock may occur.
+
+---
+
+ 🔁 Wait-for Graph
+
+A directed graph showing process dependencies:
+
+- Node = process  
+- Edge: P1 → P2 = P1 waiting for resource held by P2  
+- **Cycle** in the graph = deadlock
+
+__________________________________________
+
+ ⚙️ **Deadlock Handling Techniques**
+
+ ❌ 1. **Prevention**
+Ensure at least one Coffman condition never holds.
+
+Approaches:
+
+- No hold & wait: Request all resources at once
+- Preemption: Take resource forcibly from process
+- Resource ordering: Assign global order to resources
+
+---
+
+ ⚠️ 2. **Avoidance**
+
+Use **safe state algorithms** like **Banker’s Algorithm** to avoid unsafe states.
+
+- Requires knowledge of max resource needs
+- Allocates only if it keeps system in a safe state
+
+---
+
+ 🔍 3. **Detection**
+
+Allow deadlock, then detect via:
+- **Wait-for graphs**
+- **Resource Allocation Matrix**
+
+System scans periodically to check for cycles (deadlock)
+
+---
+💊 4. Recovery
+
+After detection:
+
+- **Process termination** (kill one or all deadlocked processes)
+- **Resource preemption** (forcibly take resources)
+- **Rollback** (restore to previous safe state)
+____________________________________________________________________________________
+
+---
+
+🧠
+</pre>
+    </div>
+
+    <div class="unit" id="unit5"data-aos="flip-left">
+      <h2>Unit 5 – File Management</h2>
+      <pre>📁 File Management
+
+
+---
+
+ 📁 File Management
+
+ 📌 File Attributes
+Metadata associated with a file that helps the OS manage it efficiently.
+
+| Attribute | Description |
+|-----------|-------------|
+| Name | Unique identifier for the file |
+| Type | Indicates the file's format or usage |
+| Location | Pointer to file's location on disk |
+| Size | File length in bytes |
+| Protection | Access permissions (read, write, execute) |
+| Time/Date | Creation, last accessed, and modified timestamps |
+| Owner | User who created or owns the file |
+
+---
+
+ 🧮 File Types
+
+1. Text files (.txt, .c, .html)  
+2. Binary files (.exe, .bin, .obj)  
+3. Directory files(store references to other files)  
+4. Special files (device files used in I/O systems)
+
+---
+ 🔓 File Access Methods
+
+1. **Sequential Access**
+   - Read/write in order
+   - Common in tape storage
+   - Example: Reading log files
+
+2. **Direct Access (Random Access)**
+   - Jump to any position
+   - Common in disks
+   - Example: Reading database records
+
+3. **Indexed Access**
+   - Uses an index block pointing to actual data
+   - Fast access
+   - Ideal for databases
+__________________________________________
+
+ 🗂️ Directory Structure
+
+Helps organize files on the disk.
+ 📂 Types of Structures:
+
+| Type | Description |
+|------|-------------|
+| Single-Level | All files in one directory |
+| Two-Level | Separate directory for each user |
+| Tree Structure | Hierarchical directories |
+| Acyclic Graph | Allows shared files across directories |
+| General Graph | Permits cycles (requires special handling) |
+
+---
+
+ 📦 Allocation Methods
+
+Determine how files are stored on disk.
+
+ 1. **Contiguous Allocation**
+
+- Files stored in adjacent blocks
+- 🌟 Fast access  
+- ❌ External fragmentation, hard resizing
+
+ 2. **Linked Allocation**
+
+- Each block contains pointer to next block
+- ✅ No fragmentation, dynamic size  
+- ❌ Slow access, not good for direct access
+
+ 3. **Indexed Allocation**
+
+- Index block contains list of block addresses
+- 🎯 Fast access, flexible  
+- ❌ Index block overhead
+
+---
+
+ 🆓 Free Space Management
+
+Ensures efficient use of disk space.
+
+| Method | Description |
+|--------|-------------|
+| **Bitmap** | Bit array—0 means free, 1 means used |
+| **Linked List** | Free blocks linked together |
+| **Grouping** | Stores list of free blocks in blocks |
+| **Counting** | Tracks first block and number of free blocks in sequence |
+
+---
+
+ 💽 Secondary Storage Management
+
+ 🔧 Disk Structure
+
+- Disks are divided into **platters** with **tracks**
+- Tracks are divided into **sectors**
+- OS deals with disks using **logical blocks**
+
+ 🌐 Logical vs Physical View
+
+| View | Description |
+|------|-------------|
+| Logical| OS view using block numbers |
+| Physical | Real layout: cylinders, heads, sectors |
+
+**Mapping** converts logical blocks to physical addresses.
+
+---
+
+ 🧠 Disk Head Scheduling Algorithms
+
+Used to schedule disk I/O requests efficiently.
+
+ 📊 Algorithms:
+
+| Algorithm | Strategy |
+|----------|----------|
+| FCFS (First-Come First-Serve) | Serve requests in arrival order |
+| SSTF (Shortest Seek Time First) | Serve request closest to head |
+| SCAN (Elevator Algorithm)| Moves in one direction then reverses |
+| LOOK | Like SCAN, but stops at last request |
+| C-SCAN (Circular SCAN) | Sweeps one direction, jumps back |
+| C-LOOK | Like C-SCAN but stops at furthest request |
+
+💡 **Goal**: Minimize seek time (head movement)
+
+---
+
+🧠
+</pre>
+<script>
+  document.getElementById('toggle-dark').addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const btn = document.getElementById('toggle-dark');
+    if (document.body.classList.contains('dark')) {
+      btn.innerHTML = '☀️ Light Mode';
+    } else {
+      btn.innerHTML = '🌙 Dark Mode';
+    }
+  });
+</script>
+
+    </div>
+  </div>
+</body>
+</html>
